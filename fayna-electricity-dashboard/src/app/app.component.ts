@@ -13,11 +13,13 @@ export class AppComponent implements OnInit {
   constructor(
     private electricityRecordService: ElectricityRecordService,
     public dialog: MatDialog){
-
+      this.dashboardData = {};
   }
+  public dashboardData: any;
+
   ngOnInit(): void {
     this.electricityRecordService.getDashboardData().subscribe(resp => {
-      debugger;
+      // this.dashboardData
     });
   }
 
